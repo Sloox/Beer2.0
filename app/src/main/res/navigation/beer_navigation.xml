@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/beer_navigation"
+    app:startDestination="@id/beerListFragment">
+
+
+    <fragment
+        android:id="@+id/beerListFragment"
+        android:name="com.wright.beers20.presentation.screens.beerlist.BeerListFragment"
+        android:label="BeerListFragment">
+
+        <action
+            android:id="@+id/action_beerListFragment_to_beerDetailsFragment"
+            app:destination="@id/beerDetailsFragment" />
+
+        <argument
+            android:name="beerId"
+            android:defaultValue="1"
+            app:argType="integer"
+            app:nullable="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/beerDetailsFragment"
+        android:name="com.wright.beers20.presentation.screens.beerdetails.BeerDetailsFragment"
+        android:label="BeerDetailsFragment" />
+
+
+</navigation>
